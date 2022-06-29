@@ -19,7 +19,7 @@
 
             if ($this->layout == false)
             {
-                $content_for_layout;
+                echo $content_for_layout;
             }
             else
             {
