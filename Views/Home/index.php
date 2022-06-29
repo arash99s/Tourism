@@ -4,7 +4,7 @@ echo "<b>$xvar</b>";
 ?>
 
 <div>
-<form method='post' action='/Final/home/show'>
+<form method='post' action='/Tourism/home/show'>
     <div class="form-group">
         <label for="title">Title</label>
         <input type="text" class="form-control" id="title" placeholder="Enter a title" name="title">
