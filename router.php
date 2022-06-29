@@ -7,7 +7,7 @@ class Router
     {
         $url = trim($url);
 
-        if ($url == "/Final/")
+        if ($url == "/Tourism/")
         {
             $request->controller = "home";
             $request->action = "index";
