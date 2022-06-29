@@ -2,7 +2,8 @@
     class Controller
     {
         var $vars = [];
-        var $layout = "default";
+        //var $layout = "default";
+        var $layout = false;
 
         function set($d)
         {
