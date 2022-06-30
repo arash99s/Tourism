@@ -54,15 +54,21 @@ class userController extends Controller{
     }
 
     function login(){
-        
+        $content = trim(file_get_contents("php://input"));
+        $decoded = json_decode($content, true);
+
         $user= new User();
-        $entered_pass="";
-        if(isset($_POST["value"])){
-            $entered_pass = $_POST["value"];
-        }else{
-            $entered_pass="321";
+        $entered_pass="xxx";
+        $entered_username = "xxx";
+
+        if(isset($decoded["password"])){
+            $entered_pass = $decoded["password"];
         }
-        $db_pass = $user->login('arash');
+        if(isset($decoded["username"])){
+            $entered_username = $decoded["username"];
+        }
+
+        $db_pass = $user->login($entered_username);
         $result = ['status'=>true , 'description'=>''];
 
         if(empty($db_pass)){
