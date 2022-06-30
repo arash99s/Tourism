@@ -10,12 +10,14 @@
 <body>
     <div>
         <p> <a href="" id="inner">login</a>  your account</p>
-        <form action="">
+        <form action="" id="login_form">
             <input type="text" placeholder="username" >
             <input type="password" placeholder="Password">
-            <input type="submit" value="login">
+
+            <input type="button" onclick="goToCreate()" value="login">
         </form>
         <a href="#" class="after" id="second">create account</a>
     </div>
 </body>
+<script src="/Tourism/views/js/login.js"></script>
 </html>

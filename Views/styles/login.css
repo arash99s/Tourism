@@ -64,7 +64,7 @@ a:hover{
     cursor: selector;
 }
 
-input[type=submit]{
+input[type=button]{
     
     text-transform: capitalize;
     text-align: center;
@@ -82,7 +82,7 @@ input[type=submit]{
     
 }
 
-input[type=submit]:hover{
+input[type=button]:hover{
     opacity: 0.8;
 }
 

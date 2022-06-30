@@ -7,9 +7,9 @@ class userController extends Controller{
 
     
     function index(){
-        $xvar = 'salam';
-        $this->set(['xvar'=>$xvar]);
-        $this->render("index"); // call view
+        // $xvar = 'salam';
+        // $this->set(['xvar'=>$xvar]);
+        $this->render("login"); // call view
     }
 
     function show(){
@@ -54,8 +54,14 @@ class userController extends Controller{
     }
 
     function login(){
+        
         $user= new User();
-        $entered_pass = '123';
+        $entered_pass="";
+        if(isset($_POST["value"])){
+            $entered_pass = $_POST["value"];
+        }else{
+            $entered_pass="321";
+        }
         $db_pass = $user->login('arash');
         $result = ['status'=>true , 'description'=>''];
 
@@ -70,6 +76,8 @@ class userController extends Controller{
             $result['description'] = "password failed";
         }
         print_r(json_encode($result));
+        
+
     }
 
     public function updateUser($username){
