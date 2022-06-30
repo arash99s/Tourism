@@ -1,0 +1,128 @@
+div{
+    
+    height: 300px;
+    width: 25%;
+    margin: auto;
+    background-color: white;
+    
+    border-radius: 20px;
+    margin-top: 135px;
+}
+
+body{
+    background: rgb(176,223,252);
+    background: linear-gradient(90deg, rgba(176,223,252,1) 28%, rgba(5,138,251,1) 93%);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+input[type=text],input[type=password]{
+    border: none;
+    border-bottom: 1px solid skyblue;
+    display:block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 70%;
+    height:3em;
+    text-align: center;
+    text-transform: capitalize;
+    color: gray;
+}
+
+input[type=text]:focus,input[type=password]:focus{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid skyblue;
+    
+}
+
+p{
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 30px;
+    margin: auto;
+    /*margin-top: 20px;*/
+    font-size:25px;
+}
+
+#inner{
+    color: cornflowerblue;
+    display: inline;
+    margin: auto;
+    padding: 0;
+    text-decoration: none;
+    
+}
+
+a:link {
+    text-decoration: none;
+  }
+  
+a:visited {
+    text-decoration: none;
+  }
+
+a:hover{
+    cursor: selector;
+}
+
+input[type=submit]{
+    
+    text-transform: capitalize;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    height: 40px;
+    background: rgb(116, 172, 207);
+    background: linear-gradient(90deg, rgb(116, 172, 207) 28%, rgba(5,138,251,1) 93%);
+    color: white;
+    border: none;
+    display: block;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom:16px;
+    
+}
+
+input[type=submit]:hover{
+    opacity: 0.8;
+}
+
+.after{
+    display: block;
+    margin: auto;
+    text-transform: capitalize;
+    width: 50%;
+    text-decoration: none;
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 2px;
+}
+
+#first{
+    color: rgb(100, 97, 97);
+}
+
+#second{
+    color: coral;
+}
+
+@media screen and (max-width: 1100px) {
+    div {
+        height: 300px;
+        width: 35%;
+    }
+}
+@media screen and (max-width: 800px) {
+    div {
+        height: 300px;
+        width: 45%;
+    }
+}
+@media screen and (max-width: 580px) {
+    div {
+        height: 300px;
+        width: 95%;
+    }
+}
+  
+
+

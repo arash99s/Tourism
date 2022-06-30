@@ -1,0 +1,113 @@
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+body{
+    background: rgb(176,223,252);
+    background: linear-gradient(90deg, rgba(176,223,252,1) 28%, rgba(5,138,251,1) 93%);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+input:-webkit-autofill{
+    -webkit-text-fill-color: rgb(216, 216, 2) !important;
+}
+.outer-container{
+    padding: 5px;
+    padding-bottom: 100px;
+    margin-top: 30px;
+    
+}
+.first-container{
+    margin: auto;
+    padding: 10px;
+    padding-top: none !important;
+    background-color:white;
+    border-radius: 20px;
+    /* border: 2px solid cornflowerblue; */
+    /* box-shadow: rgba(240, 161, 132, 1) 0px 5px 20px 5px; */
+}
+input[type=text],input[type=password],input[type=email]{
+    border: none;
+    border-bottom: 1px solid cornflowerblue;
+    display:block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 70%;
+    height:2em;
+    text-align: center;
+    color: gray;
+    direction: ltr !important;
+}
+
+input[type=text]:focus,input[type=password]:focus,input[type=email]:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid cornflowerblue;
+    /* border-radius: 10px; */
+    
+}
+
+p{
+    text-align: center;
+    font-size:14px;
+    margin: auto;
+    margin-top: 10px;
+
+}
+
+button{
+    
+    text-transform: capitalize;
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    height: 40px;
+    background: cornflowerblue;
+    color: white;
+    border: none;
+    display: block;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom:16px;
+    
+}
+
+.req{
+    color: red;
+    font-size: small;
+    text-align: center;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#inner{
+    color: cornflowerblue;
+    display: inline;
+    margin: auto;
+    margin-top: 20px !important;
+    margin-bottom: 20x !important;
+    text-decoration: none;
+    
+}
+.outer-p{
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 10px !important;
+    margin: auto;
+    font-size:25px; 
+}
+
+p-wraper{
+    padding-bottom: 20px !important;
+    height: 20px;
+
+}
+
+button:hover{
+    opacity: 0.7;
+}
+
