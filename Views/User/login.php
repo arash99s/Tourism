@@ -16,7 +16,7 @@
 
             <input type="button" onclick="goToCreate()" value="login">
         </form>
-        <a href="#" class="after" id="second">create account</a>
+        <a href="/Tourism/user/createUser" class="after" id="second">create account</a>
     </div>
 </body>
 <script src="/Tourism/views/js/login.js"></script>

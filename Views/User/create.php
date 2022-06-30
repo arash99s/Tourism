@@ -12,7 +12,7 @@
     <div class="col-xl-4 col-lg-4 col-md-3"></div>
     <div class="col-xl-4 col-lg-4 col-md-6 outer-container mt-5">
         <div class="card card-container first-container">
-            <form  name="form" #f="ngForm" novalidate>
+            <form novalidate>
                 <div class="p-wraper">
                     <p class="outer-p">  <a id="inner">Create</a> account</p>
                 </div>
@@ -34,7 +34,7 @@
                     <input type="text" name="city"  />
                     <p>country</p>
                     <input type="text" name="country"  />
-                    <button onclick="" class="btn btn-block">Create</button>
+                    <button onclick="create_action()" class="btn btn-block">Create</button>
                 </div>
             </form>
         </div>

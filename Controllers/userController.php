@@ -18,7 +18,7 @@ class userController extends Controller{
         }
     }
 
-    function createUser(){
+    function createUserApi(){
         $result = ['status'=>true , 'description'=>''];
         $user= new User();
 
@@ -53,6 +53,9 @@ class userController extends Controller{
         
     }
 
+    function createUser(){
+        $this->render("create");
+    }
     function login(){
         $content = trim(file_get_contents("php://input"));
         $decoded = json_decode($content, true);
