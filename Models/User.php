@@ -96,6 +96,7 @@ class User extends Model
             city varchar(255),
             country varchar(255),
             avatar varchar(255),
+            updated_at DateTime,
             UNIQUE (username)
         )";
 
