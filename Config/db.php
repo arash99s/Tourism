@@ -9,7 +9,10 @@ class Database
 
     public static function getBdd() {
         if(is_null(self::$bdd)) {
-            self::$bdd = new PDO("mysql:host=localhost;dbname=todo_php", 'root', 'root');
+            self::$bdd = new PDO("mysql:host=localhost:3306;dbname=Tourism", 'root', '');
+        }
+        if(!self::$bdd){
+            echo "can not connect to database\n";
         }
         return self::$bdd;
     }
