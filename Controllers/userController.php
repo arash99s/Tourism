@@ -9,7 +9,7 @@ class userController extends Controller{
     function index(){
         // $xvar = 'salam';
         // $this->set(['xvar'=>$xvar]);
-        $this->render("login"); // call view
+        $this->render("test"); // call view
     }
 
     function show(){
