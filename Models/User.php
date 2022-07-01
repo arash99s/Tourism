@@ -25,9 +25,7 @@ class User extends Model
     }
 
     public function login($username ){
-        $db_pass = $this->showUser($username);
-        if($db_pass)    return $db_pass['password'];
-        return $db_pass;
+        return $this->showUser($username);
     }
 
     public function showUser($username)

@@ -82,13 +82,14 @@ class userController extends Controller{
             $entered_username = $decoded["username"];
         }
 
-        $db_pass = $user->login($entered_username);
+        $db_user = $user->login($entered_username);
         $result = ['status'=>true , 'description'=>''];
 
-        if(empty($db_pass)){
+        if(empty($db_user)){
             $result['status'] = false;
             $result['description'] = "user does not exist";
-        }else if($db_pass == $entered_pass){
+        }else if($db_user['password'] == $entered_pass){
+            print_r($db_user);
             $result['status'] = true;
             $result['description'] = "login sucessful";
         }else{
