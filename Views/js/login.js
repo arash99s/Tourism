@@ -10,7 +10,7 @@ function goToCreate(){
         // alert(this.getResponseHeader("status"));
 
     }
-    xhttp.open("POST", "/Tourism/user/login" , true);
+    xhttp.open("POST", "/Tourism/user/loginApi" , true);
     xhttp.setRequestHeader("Accept", "application/json");
     xhttp.setRequestHeader("Content-Type", "application/json");
 

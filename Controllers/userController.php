@@ -18,11 +18,24 @@ class userController extends Controller{
         }
     }
 
+    function createUser(){
+        $this->render("create");
+    }
+    function loginUser(){
+        $this->render("login");
+    }
+
     function createUserApi(){
+        $content = trim(file_get_contents("php://input"));
+        $decoded = json_decode($content, true);
+
+        $username = $decoded["username"];
+        $password = $decoded["password"];
+
         $result = ['status'=>true , 'description'=>''];
         $user= new User();
 
-        if (!empty($user->showUser("arash"))){
+        if (!empty($user->showUser($username))){
             $result['status'] = false;
             $result['description'] = "user already exist";
             print_r(json_encode($result)); 
@@ -30,15 +43,15 @@ class userController extends Controller{
         }
 
         $data = [
-            'username'=>'arash',
-            'password'=>'123',
-            'email'=>'arash',
-            'firstname'=>'arash',
-            'lastname'=>'arash',
-            'age'=>'arash',
-            'city'=>'arash',
-            'country'=>'arash',
-            'avatar'=>'arash',
+            'username'=>$username,
+            'password'=>$password,
+            'email'=>$decoded["email"],
+            'firstname'=>$decoded["firstname"],
+            'lastname'=>'',
+            'age'=>$decoded["age"],
+            'city'=>$decoded["city"],
+            'country'=>$decoded["country"],
+            'avatar'=>"/Tourism/avatars/default.png",
         ];
 
         if($user->create($data)){
@@ -53,10 +66,8 @@ class userController extends Controller{
         
     }
 
-    function createUser(){
-        $this->render("create");
-    }
-    function login(){
+    
+    function loginApi(){
         $content = trim(file_get_contents("php://input"));
         $decoded = json_decode($content, true);
 
