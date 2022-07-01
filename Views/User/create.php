@@ -12,33 +12,55 @@
     <div class="col-xl-4 col-lg-4 col-md-3"></div>
     <div class="col-xl-4 col-lg-4 col-md-6 outer-container mt-5">
         <div class="card card-container first-container">
-            <form novalidate>
+            <div>
                 <div class="p-wraper">
                     <p class="outer-p">  <a id="inner">Create</a> account</p>
                 </div>
                 <div class="form-group">
-                    <br>
-                    <p>username</p>
-                    <input type="text" name="username"  required minlength="4" maxlength="20"/>
-                        <p>password</p>
-                    <input type="password" name="password" required minlength="6"/>
-                        <p>confirm password</p>
-                    <input type="password" name="confirmPass" required minlength="6"/>
-                        <p>email</p>
-                    <input type="email" name="email" #email="ngModel" email />
-                    <p>full name</p>
-                    <input type="text" name="name"  />
-                    <p>age</p>
-                    <input type="text" name="age"  />
-                    <p>city</p>
-                    <input type="text" name="city"  />
-                    <p>country</p>
-                    <input type="text" name="country"  />
-                    <button onclick="create_action()" class="btn btn-block">Create</button>
+                    <form action="" novalidate id="create_form">
+                        <br>
+                        <p>username<span  class="req">*</span></p>
+                        
+                        <input type="text" name="username"  required />
+                        <div class="alerts" id="alert1">
+                            <!-- <p class="req" style="margin-bottom:5px ; ">
+                                username is require
+                            </p> -->
+                        </div>
+                            <p>password<span  class="req">*</span></p>
+                        <input type="password" name="password" required />
+                        <div class="alerts" id="alert2">
+                            
+                            <!-- <p class="req" style="margin-bottom:5px ; ">
+                                password is require
+                            </p> -->
+                        </div>
+                            <p>confirm password<span  class="req">*</span></p>
+                        <input type="password" name="confirmPass" required/>
+                        <div class="alerts" id="alert3">
+                            <!-- <p class="req" style="margin-bottom:5px ; ">
+                                confirm password is require
+                            </p> -->
+                        </div>
+                            <p>email</p>
+                        <input type="email" name="email" #email="ngModel" email />
+                        <p>full name</p>
+                        <input type="text" name="name"  />
+                        <p>age</p>
+                        <input type="text" name="age"  />
+                        <p>city</p>
+                        <input type="text" name="city"  />
+                        <p>country</p>
+                        <input type="text" name="country"  />
+                        <!-- <button onclick="create_action()" class="btn btn-block">Create</button> -->
+                        <input type="button"  onclick="create_action()" value="Create">
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
     <div class="col-xl-4 col-lg-4 col-md-3"></div>
 </body>
+<script src="/Tourism/views/js/create.js"></script>
+
 </html>
