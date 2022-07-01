@@ -18,6 +18,10 @@ class userController extends Controller{
         }
     }
 
+    function panel(){
+        $this->render("panel");
+    }
+
     function createUser(){
         $this->render("create");
     }
@@ -66,6 +70,11 @@ class userController extends Controller{
         
     }
 
+    function logout(){
+        session_start();
+        session_destroy();
+        $this->render("login");
+    }
     
     function loginApi(){
         $content = trim(file_get_contents("php://input"));
@@ -89,7 +98,8 @@ class userController extends Controller{
             $result['status'] = false;
             $result['description'] = "user does not exist";
         }else if($db_user['password'] == $entered_pass){
-            print_r($db_user);
+            session_start();
+            $_SESSION["user"] = $db_user;
             $result['status'] = true;
             $result['description'] = "login sucessful";
         }else{

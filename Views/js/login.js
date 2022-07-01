@@ -4,11 +4,15 @@ function goToCreate(){
 
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
-        // document.getElementById("demo").innerHTML =
         var data = JSON.parse(this.responseText);
         alert(data.description);
-        // alert(this.getResponseHeader("status"));
-
+        if (data.status == true){
+            // go to login page
+            var a = document.createElement("a");
+            a.href = "/Tourism/user/panel";
+            a.click();
+            document.removeChild(a);
+        }
     }
     xhttp.open("POST", "/Tourism/user/loginApi" , true);
     xhttp.setRequestHeader("Accept", "application/json");

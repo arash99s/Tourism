@@ -12,6 +12,10 @@ class tripController extends Controller{
         $this->render("test"); // call view
     }
 
+    function create(){
+        $this->render("journey");
+    }
+
     function createTripApi(){
         $content = trim(file_get_contents("php://input"));
         $decoded = json_decode($content, true);

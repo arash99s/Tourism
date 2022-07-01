@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if(isset($_SESSION["user"])){
+        $user = $_SESSION["user"];
+    }else{
+        header('Location: '.'/Tourism/user/loginUser');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +27,7 @@
                 <label for="">user name :</label>
             </div> 
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <p>mohamdreza</p>
+                <p><?php echo $user["username"];?></p>
             </div>
             <!-- <div class="col-lg-2"></div> -->
             <hr>
@@ -25,7 +35,7 @@
                 <label for="">email : </label>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <p>mohamdreza@gmail.com</p>
+                <p><?php echo $user["email"];?></p>
             </div>
             <!-- <div class="col-lg-2"></div> -->
             <hr>
@@ -33,7 +43,7 @@
                 <label for="">firstname : </label>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <p>mohamdreza@gmail.com</p>
+                <p><?php echo $user["firstname"];?></p>
             </div>
             <!-- <div class="col-lg-2"></div> -->
             <hr>
@@ -41,14 +51,14 @@
                 <label for="">lastname : </label>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <p>mohamdreza@gmail.com</p>
+                <p><?php echo $user["lastname"];?></p>
             </div>
             <hr>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <label for="">age : </label>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <p>mohamdreza@gmail.com</p>
+                <p><?php echo $user["age"];?></p>
             </div>
             <!-- <div class="col-lg-2"></div> -->
             <hr>
@@ -56,7 +66,7 @@
         
         <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 item">
             <div class="imgwrapper">
-                <img src="/Tourism/avatars/default.png" alt="">
+                <img src=<?php echo $user["avatar"];?> alt="">
             </div>
         </div>
     
@@ -65,7 +75,7 @@
                 <label for="">city : </label>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-4 col-xs-4">
-                <p>tehran</p>
+                <p><?php echo $user["city"];?></p>
             </div>
         </div>
         
@@ -76,7 +86,7 @@
                 <label for="">country : </label>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-4 col-xs-4">
-                <p>iran</p>
+                <p><?php echo $user["country"];?></p>
             </div>
         </div>
         
@@ -85,7 +95,8 @@
         <hr>
         <div class="col-lg-5"></div>
         <div class="col-lg-2">
-            <input type="button" value="new journey">
+            <input type="button" value="new journey" onclick="createTrip()">
+            <a href="/Tourism/user/logout">logout</a>
         </div>
         <div class="col-lg-5"></div>
     </div>
@@ -94,6 +105,6 @@
     </div>
     <div class="col-lg-2 col-md-1 col-sm-1"></div>
     
-    
+    <script src="/Tourism/Views/js/panel.js"></script>
 </body>
 </html>
