@@ -1,0 +1,142 @@
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+body{
+    background: rgb(91, 157, 197);
+    background: linear-gradient(90deg, rgb(91, 157, 197) 28%, rgba(5,138,251,1) 93%);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+input:-webkit-autofill{
+    -webkit-text-fill-color: rgb(216, 216, 2) !important;
+}
+.container{
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    background-color: beige;
+    border: none;
+    border-radius: 10px;
+    padding-top: 5px;
+    
+}
+.first-container{
+    margin: auto;
+    padding: 10px;
+    padding-top: none !important;
+    background-color:white;
+    border-radius: 20px;
+    /* border: 2px solid cornflowerblue; */
+    /* box-shadow: rgba(240, 161, 132, 1) 0px 5px 20px 5px; */
+}
+input[type=text],input[type=password],input[type=email]{
+    border: none;
+    border-bottom: 1px solid cornflowerblue;
+    display:block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 70%;
+    height:2em;
+    text-align: center;
+    color: gray;
+    direction: ltr !important;
+}
+
+input[type=text]:focus,input[type=password]:focus,input[type=email]:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid cornflowerblue;
+    /* border-radius: 10px; */
+    
+}
+.item{
+    margin-top: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+p{
+    text-align: center;
+    font-size:14px;
+    margin: auto;
+    margin-top: 10px;
+    display: inline;
+}
+hr{
+    width:100%;
+    text-align:left;
+    margin-left:0;
+    /* margin-top: 20px; */
+    
+    border-top: 1px solid #932525 !important;
+}
+input[type=button]{
+    
+    text-transform: capitalize;
+    text-align: center;
+    margin: auto;
+    
+    height: 40px;
+    background: rgb(5, 170, 5);
+    color: white;
+    border: none;
+    display: block;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom:16px;
+    
+}
+
+.req{
+    color: red;
+    font-size: small;
+    text-align: center;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#inner{
+    color: cornflowerblue;
+    display: inline;
+    margin: auto;
+    margin-top: 20px !important;
+    margin-bottom: 20x !important;
+    text-decoration: none;
+    
+}
+.outer-p{
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 10px !important;
+    margin: auto;
+    font-size:25px; 
+}
+
+p-wraper{
+    padding-bottom: 20px !important;
+    height: 20px;
+
+}
+
+input[type=button]:hover{
+    opacity: 0.8;
+}
+img{
+    text-align: center;
+    justify-content: center;
+
+}
+
+.imgwrapper{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
