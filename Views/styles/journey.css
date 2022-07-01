@@ -1,0 +1,135 @@
+body{
+    background: rgb(84, 151, 192);
+    background: linear-gradient(90deg, rgb(84, 151, 192) 28%, rgba(5,138,251,1) 93%);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    direction: rtl;
+    padding: 10px;
+}
+div{
+    padding: 5px;
+    width: 95%;
+    margin: auto;
+    background-color: beige;
+    border-radius: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+
+input[type=text],input[type=password]{
+    border: none;
+    border-bottom: 1px solid skyblue;
+    display:inline;
+    margin: 10px auto;
+    padding: 5px;
+    width: 97%;
+    height:2em;
+    text-align: right;
+    /* text-transform: capitalize; */
+    color: gray;
+    font-size: larger;
+    margin-top: 0;
+}
+
+input[type=text]:focus,input[type=password]:focus{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #932525 ;
+    
+}
+
+p{
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 30px;
+    margin: auto;
+    /*margin-top: 20px;*/
+    font-size:25px;
+}
+
+#inner{
+    color: cornflowerblue;
+    display: inline;
+    margin: auto;
+    padding: 0;
+    text-decoration: none;
+    
+}
+
+a:link {
+    text-decoration: none;
+  }
+  
+a:visited {
+    text-decoration: none;
+  }
+
+a:hover{
+    cursor: selector;
+}
+
+input[type=button]{
+    
+    text-transform: capitalize;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: 40px;
+    background: rgb(5, 170, 5);
+    color: white;
+    border: none;
+    display: block;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom:16px;
+    
+}
+
+input[type=button]:hover{
+    opacity: 0.8;
+}
+
+.after{
+    display: block;
+    margin: auto;
+    text-transform: capitalize;
+    width: 50%;
+    text-decoration: none;
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 2px;
+}
+
+#first{
+    color: rgb(100, 97, 97);
+}
+
+#second{
+    color: coral;
+}
+
+.container{
+    display: flex;
+    /* align-items: flex-start; */
+
+}
+
+
+label{
+    /* height: 3em; */
+    /* width: 80px; */
+    font-size: larger;
+    /* color: #932525 ; */
+    margin-top: 15px;
+}
+textarea{
+    max-height: 50px;
+    max-width: 600px;
+    overflow: hidden !important;
+    
+}
+
+
+  
+
+
