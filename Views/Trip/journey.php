@@ -14,33 +14,37 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <i class='fas fa-comment-dollar'></i>&nbsp;<label for="costs">هزينه های سفر : </label>
-            <!-- <input type="text" name="costs" id="costs"> -->
-            <textarea class="form-control" id="costs" rows="2"></textarea>
-            <i class='fas fa-place-of-worship'></i>&nbsp;<label for="suggest">مکان های پیشنهادی : </label>
-            <!-- <input type="text" name="costs" id="costs"> -->
-            <textarea class="form-control" id="suggest" rows="2"></textarea>
-            <i class="material-icons">&#xe535;</i>&nbsp;<label for="trans">نحوه جابه جایی در شهر : </label>
-            <!-- <input type="text" name="costs" id="costs"> -->
-            <textarea class="form-control" id="trans" rows="2"></textarea>
-            <i class='fas fa-comment'></i>&nbsp;<label for="others">توضیحات دیگر : </label>
-            <!-- <input type="text" name="costs" id="costs"> -->
-            <textarea class="form-control" id="others" rows="2"></textarea>
+            <form method="post" id="form1" enctype="multipart/form-data" >
+                <i class='fas fa-comment-dollar'></i>&nbsp;<label for="costs">هزينه های سفر : </label>
+                <!-- <input type="text" name="costs" id="costs"> -->
+                <textarea class="form-control" id="costs" rows="2"></textarea>
+                <i class='fas fa-place-of-worship'></i>&nbsp;<label for="suggest">مکان های پیشنهادی : </label>
+                <!-- <input type="text" name="costs" id="costs"> -->
+                <textarea class="form-control" id="suggest" rows="2"></textarea>
+                <i class="material-icons">&#xe535;</i>&nbsp;<label for="trans">نحوه جابه جایی در شهر : </label>
+                <!-- <input type="text" name="costs" id="costs"> -->
+                <textarea class="form-control" id="trans" rows="2"></textarea>
+                <i class='fas fa-comment'></i>&nbsp;<label for="others">توضیحات دیگر : </label>
+                <!-- <input type="text" name="costs" id="costs"> -->
+                <textarea class="form-control" id="others" rows="2"></textarea>
+            </form>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <i class='fas fa-ad fa-1x'></i>&nbsp;<label for="fadd"> آدرس کامل  : </label>
-            <!-- <input type="text" name="fadd" id="fadd"> -->
-            <textarea class="form-control" id="fadd" rows="2"></textarea>
+            <form method="post" id="form2" enctype="multipart/form-data" >
+                <i class='fas fa-ad fa-1x'></i>&nbsp;<label for="fadd"> آدرس کامل  : </label>
+                <!-- <input type="text" name="fadd" id="fadd"> -->
+                <textarea class="form-control" id="fadd" rows="2"></textarea>
 
-            <i class='far fa-building'></i>&nbsp;<label for="his">تاریخچه بنا های دیده شده : </label>
-            <!-- <input type="text" name="costs" id="costs"> -->
-            <textarea class="form-control" id="his" rows="2"></textarea>
-            <i class="material-icons">&#xe7fb;</i>&nbsp;<label for="cul">فرهنگ مردم : </label>
-            <!-- <input type="text" name="costs" id="costs"> -->
-            <textarea class="form-control" id="cul" rows="2"></textarea>
-            <i class="material-icons">&#xe32a;</i>&nbsp;<label for="sec">نکات امنیتی : </label>
-            <!-- <input type="text" name="costs" id="costs"> -->
-            <textarea class="form-control" id="sec" rows="2"></textarea>
+                <i class='far fa-building'></i>&nbsp;<label for="his">تاریخچه بنا های دیده شده : </label>
+                <!-- <input type="text" name="costs" id="costs"> -->
+                <textarea class="form-control" id="his" rows="2"></textarea>
+                <i class="material-icons">&#xe7fb;</i>&nbsp;<label for="cul">فرهنگ مردم : </label>
+                <!-- <input type="text" name="costs" id="costs"> -->
+                <textarea class="form-control" id="cul" rows="2"></textarea>
+                <i class="material-icons">&#xe32a;</i>&nbsp;<label for="sec">نکات امنیتی : </label>
+                <!-- <input type="text" name="costs" id="costs"> -->
+                <textarea class="form-control" id="sec" rows="2"></textarea>
+            </form>
         </div>
         <!-- <div class="form-group">
             <label for="FormControlFile">بارگذاري تصاوير سفر</label>
@@ -48,15 +52,25 @@
         </div> -->
         <div  class="col-lg-9 col-md-9 col-sm-8 col-xs-6"></div>
         <div  class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-            <form action="browse.php" method="post" id="form1" enctype="multipart/form-data" onclick="browse()">
-                <input style="display: none;" type="file" value="Upload New image" id="input1" accept="image/*" name="file">   
-                <input type="button" value="Upload New image">
+        <form action="" method="post" id="form3" enctype="multipart/form-data" >
+                <input  style="display: none;" type="text" name="costs2" id="costs2">
+                <input  style="display: none;" type="text" name="suggest2" id="suggest2">
+                <input  style="display: none;" type="text" name="trans2" id="trans2">
+                <input  style="display: none;" type="text" name="others2" id="others2">
+                <input  style="display: none;" type="text" name="fadd2" id="fadd2">
+                <input  style="display: none;" type="text" name="his2" id="his2">
+                <input  style="display: none;" type="text" name="cul2" id="cul2">
+                <input  style="display: none;" type="text" name="sec2" id="sec2">
+                
+                <input style="display: none;" type="file" multiple="multiple" value="Upload New image" id="input1" accept="image/*" name="file">   
+                <input type="button" value="Upload New image" onclick="browse()">
+                <output id="result">
             </form>
         </div>
         <div  class="col-lg-4 col-md-4 col-sm-3 col-xs-2"></div>
         <div  class="col-lg-4 col-md-4 col-sm-6 col-xs-8">
             <div>
-                <input type="button" value="ثبت تجربه سفر">
+                <input type="button" value="ثبت تجربه سفر" onclick="create()">
             </div>
         </div>
         <div  class="col-lg-4 col-md-4 col-sm-3 col-xs-2"></div>
@@ -66,19 +80,5 @@
     
       
 </body>
-<script>
-    const fileInput = document.getElementById("input1");
-    const form = document.getElementById("form1");
-
-    function browse(){
-        fileInput.click();
-    }
-    fileInput.onchange = ({target})=>{
-        let file = target.files[0];
-        if(file){
-            
-            form.submit();
-        }
-    }
-</script>
+<script src="/Tourism/Views/js/journey.js"></script>
 </html>
