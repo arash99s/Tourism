@@ -23,41 +23,41 @@
     <div class="col-lg-8 col-md-10 col-sm-10 col-xs-10 container">
         <hr>
         <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 item">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
                 <label for="">user name :</label>
             </div> 
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
                 <p><?php echo $user["username"];?></p>
             </div>
             <!-- <div class="col-lg-2"></div> -->
             <hr>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
                 <label for="">email : </label>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
                 <p><?php echo $user["email"];?></p>
             </div>
             <!-- <div class="col-lg-2"></div> -->
             <hr>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12" >
                 <label for="">firstname : </label>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
                 <p><?php echo $user["firstname"];?></p>
             </div>
             <!-- <div class="col-lg-2"></div> -->
             <hr>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
                 <label for="">lastname : </label>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
                 <p><?php echo $user["lastname"];?></p>
             </div>
             <hr>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
                 <label for="">age : </label>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
                 <p><?php echo $user["age"];?></p>
             </div>
             <!-- <div class="col-lg-2"></div> -->
@@ -70,22 +70,22 @@
             </div>
         </div>
     
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 item2">
-            <div class="col-lg-4 col-md-8 col-xs-8">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 item2">
+            <div class="col-lg-4 col-md-8 col-xs-12">
                 <label for="">city : </label>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-4">
+            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
                 <p><?php echo $user["city"];?></p>
             </div>
         </div>
         
         
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 item2">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 item2">
             
-            <div class="col-lg-4 col-md-4 col-sm-8 col-xs-8">
+            <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
                 <label for="">country : </label>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-4">
+            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
                 <p><?php echo $user["country"];?></p>
             </div>
         </div>
@@ -93,12 +93,13 @@
 
         <!-- <div class="col-lg-4"></div> -->
         <hr>
-        <div class="col-lg-5"></div>
-        <div class="col-lg-2">
+        <!-- <div class="col-lg-1"></div> -->
+        <div class="button-container">
             <input type="button" value="new journey" onclick="createTrip()">
-            <a href="/Tourism/user/logout">logout</a>
+            <a href="/Tourism/user/logout" class="alogout"><input type="button" value="logout" class="logout"></a>
+            <a href="" class="alogout"><input type="button"  value="Main Page" class="home"></a>
         </div>
-        <div class="col-lg-5"></div>
+        <!-- <div class="col-lg-1"></div> -->
     </div>
     <div>
        

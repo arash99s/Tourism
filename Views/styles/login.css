@@ -1,10 +1,10 @@
-div{
+.container{
     
-    height: 300px;
+    /* height: 300px; */
     width: 25%;
     margin: auto;
     background-color: white;
-    
+    padding: 10px;
     border-radius: 20px;
     margin-top: 135px;
 }
@@ -34,7 +34,7 @@ input[type=text]:focus,input[type=password]:focus{
     
 }
 
-p{
+.title{
     text-transform: capitalize;
     text-align: center;
     padding-top: 30px;
@@ -106,23 +106,34 @@ input[type=button]:hover{
 }
 
 @media screen and (max-width: 1100px) {
-    div {
+    .container {
         height: 300px;
         width: 35%;
     }
 }
 @media screen and (max-width: 800px) {
-    div {
+    .container {
         height: 300px;
         width: 45%;
     }
 }
 @media screen and (max-width: 580px) {
-    div {
+    .container {
         height: 300px;
         width: 95%;
     }
 }
+
+
+.req{
+    color: red;
+    font-size: small;
+    text-align: center;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
   
 
 

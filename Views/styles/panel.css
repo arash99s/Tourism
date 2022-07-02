@@ -78,13 +78,13 @@ input[type=button]{
     
     text-transform: capitalize;
     text-align: center;
-    margin: auto;
+    /* margin: auto; */
     
     height: 40px;
     background: rgb(5, 170, 5);
     color: white;
     border: none;
-    display: block;
+    display: inline;
     border-radius: 5px;
     margin-top: 25px;
     margin-bottom:16px;
@@ -139,4 +139,24 @@ img{
     justify-content: center;
     
 }
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logout{
+    background-color: red !important;
+}
+
+.alogout{
+    text-decoration: none !important;
+
+}
+.home{
+    background-color: rgb(30, 30, 185) !important;
+}
+
+
 
