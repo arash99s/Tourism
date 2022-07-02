@@ -2,6 +2,7 @@
 class Trip extends Model
 {
     private $tablename = 'trips';
+
     public function create($data)
     {
         $sql = "INSERT INTO trips (fullAddress, userId, costs, history , suggestion ,culture , transportation , security , description, updated_at) 
@@ -9,7 +10,7 @@ class Trip extends Model
 
         $req = Database::getBdd()->prepare($sql);
 
-        return $req->execute([
+        $creation = $req->execute([
             'fullAddress' => $data['fullAddress'],
             'userId' => $data['userId'],
             'costs' => $data['costs'],
@@ -21,8 +22,17 @@ class Trip extends Model
             'description' => $data['description'],
             'updated_at' => date('Y-m-d H:i:s')
         ]);
+        if($creation){
+            $sql2 = "SELECT * FROM trips ORDER BY updated_at DESC";
+            $req2 = Database::getBdd()->prepare($sql2);
+            $req2->execute();
+            return $req2->fetch()['id'];
+        }else{
+            return 0;
+        }
     }
 
+   
 
     public function showAlltrips()
     {

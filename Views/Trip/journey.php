@@ -52,15 +52,15 @@
         </div> -->
         <div  class="col-lg-9 col-md-9 col-sm-8 col-xs-6"></div>
         <div  class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-        <form action="" method="post" id="form3" enctype="multipart/form-data" >
-                <input  style="display: none;" type="text" name="costs2" id="costs2">
-                <input  style="display: none;" type="text" name="suggest2" id="suggest2">
-                <input  style="display: none;" type="text" name="trans2" id="trans2">
-                <input  style="display: none;" type="text" name="others2" id="others2">
-                <input  style="display: none;" type="text" name="fadd2" id="fadd2">
-                <input  style="display: none;" type="text" name="his2" id="his2">
-                <input  style="display: none;" type="text" name="cul2" id="cul2">
-                <input  style="display: none;" type="text" name="sec2" id="sec2">
+        <form action="/Tourism/trip/createTripApi" method="post" id="form3" enctype="multipart/form-data" >
+                <input  style="display: none;" type="text" name="costs" id="costs2">
+                <input  style="display: none;" type="text" name="suggestion" id="suggest2">
+                <input  style="display: none;" type="text" name="transportation" id="trans2">
+                <input  style="display: none;" type="text" name="description" id="others2">
+                <input  style="display: none;" type="text" name="fullAddress" id="fadd2">
+                <input  style="display: none;" type="text" name="history" id="his2">
+                <input  style="display: none;" type="text" name="culture" id="cul2">
+                <input  style="display: none;" type="text" name="security" id="sec2">
                 
                 <input style="display: none;" type="file" multiple="multiple" value="Upload New image" id="input1" accept="image/*" name="file">   
                 <input type="button" value="Upload New image" onclick="browse()">
