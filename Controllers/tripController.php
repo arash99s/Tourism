@@ -3,6 +3,7 @@ class tripController extends Controller{
     
     function __construct() {
         require(ROOT . 'Models/Trip.php');
+        require(ROOT . 'Controllers/imageController.php');
       }
 
     
@@ -15,6 +16,22 @@ class tripController extends Controller{
     function create(){
         $this->render("journey");
     }
+
+    function get(){
+        session_start();
+        if (!isset($_SESSION["user"])){
+            echo 'user not defined';
+            return;
+        }
+        $trip_model = new Trip();
+        $imageController = new imageController();
+        $trips_db = $trip_model->getTripsUser($_SESSION["user"]['username']);
+        for ($i=0; $i < count($trips_db) ; $i++) { 
+            $trips_db[$i]['images'] = $imageController->getImagesTrip($trips_db[$i]['id']);
+        }
+        print_r($trips_db);
+    }
+
 
     function createTripApi(){
         session_start();
@@ -57,9 +74,12 @@ class tripController extends Controller{
 
         $creation = $trip_model->create($data) ; // zero or trip_id
         if($creation){
-            $result['status'] = true;
-            $result['description'] = "trip created";
-            print_r($creation);
+            $imageController = new imageController();
+            $result = $imageController->createImages($creation,$_SESSION['user']['id'] , $_FILES);
+            if ($result){
+                header('Location: '.'/Tourism/user/panel');
+                exit();
+            }
         }else{
             $result['status'] = false;
             $result['description'] = "creation failed with unknown reasons";
@@ -75,6 +95,7 @@ class tripController extends Controller{
         $trip_model = new Trip();
         print_r($trip_model->createTable());
     }
+    
 }
 
 ?>

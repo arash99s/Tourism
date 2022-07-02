@@ -55,7 +55,7 @@ class Trip extends Model
         )";
         $req = Database::getBdd()->prepare($sql);
         $req->execute([$username]);
-        return $req->fetch();
+        return $req->fetchAll();
     }
 
     public function edit($data)
