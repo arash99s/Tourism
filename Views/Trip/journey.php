@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if(isset($_SESSION["user"])){
+        $user = $_SESSION["user"];
+    }else{
+        header('Location: '.'/Tourism/user/loginUser');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
