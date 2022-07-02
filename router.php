@@ -10,7 +10,7 @@ class Router
         if ($url == "/Tourism/")
         {
             $request->controller = "user";
-            $request->action = "index";
+            $request->action = "panel";
             $request->params = [];
         }
         else
