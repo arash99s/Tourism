@@ -82,6 +82,8 @@ input[type=button]{
     border-radius: 5px;
     margin-top: 25px;
     margin-bottom:16px;
+    font-size: x-large;
+    /* font-weight: 700; */
     
 }
 
@@ -135,11 +137,54 @@ textarea{
     flex-wrap: wrap;
     gap: 10px;
     padding: 10px 0;
+    width: 100%;
   }
   
   .thumbnail {
     height: 192px;
+    width: 22%;
+    min-width: 100px;
   }
+
+  .add{
+    background-color: rgb(255, 129, 45) !important;
+    width: 25% !important;
+    float: right !important;
+  }
+
+  /* .row_images{
+    display: flex;
+    justify-content: center;
+    
+  } */
+
+  .btncontainer{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+
+  .acc{
+    width: 20% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+
+  }
+
+  .rej{
+    width: 20% !important;
+    text-decoration: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .btnrej{
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
 
   
 

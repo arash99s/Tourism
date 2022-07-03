@@ -1,15 +1,16 @@
 <?php
-    session_start();
-    if(isset($_SESSION["user"])){
-        $user = $_SESSION["user"];
-    }else{
-        header('Location: '.'/Tourism/user/loginUser');
-        exit();
-    }
+session_start();
+if (isset($_SESSION["user"])) {
+    $user = $_SESSION["user"];
+} else {
+    header('Location: ' . '/Tourism/user/loginUser');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,11 +21,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        
+
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <form method="post" id="form1" enctype="multipart/form-data" >
+            <form method="post" id="form1" enctype="multipart/form-data">
                 <i class='fas fa-comment-dollar'></i>&nbsp;<label for="costs">هزينه های سفر : </label>
                 <!-- <input type="text" name="costs" id="costs"> -->
                 <textarea class="form-control" id="costs" rows="2"></textarea>
@@ -40,8 +42,8 @@
             </form>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <form method="post" id="form2" enctype="multipart/form-data" >
-                <i class='fas fa-ad fa-1x'></i>&nbsp;<label for="fadd"> آدرس کامل  : </label>
+            <form method="post" id="form2" enctype="multipart/form-data">
+                <i class='fas fa-ad fa-1x'></i>&nbsp;<label for="fadd"> آدرس کامل : </label>
                 <!-- <input type="text" name="fadd" id="fadd"> -->
                 <textarea class="form-control" id="fadd" rows="2"></textarea>
 
@@ -60,35 +62,39 @@
             <label for="FormControlFile">بارگذاري تصاوير سفر</label>
             <input type="file" class="form-control-file" id="FormControlFile">
         </div> -->
-        <div  class="col-lg-9 col-md-9 col-sm-8 col-xs-6"></div>
-        <div  class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-        <form action="/Tourism/trip/createTripApi" method="post" id="form3" enctype="multipart/form-data" >
-                <input  style="display: none;" type="text" name="costs" id="costs2">
-                <input  style="display: none;" type="text" name="suggestion" id="suggest2">
-                <input  style="display: none;" type="text" name="transportation" id="trans2">
-                <input  style="display: none;" type="text" name="description" id="others2">
-                <input  style="display: none;" type="text" name="fullAddress" id="fadd2">
-                <input  style="display: none;" type="text" name="history" id="his2">
-                <input  style="display: none;" type="text" name="culture" id="cul2">
-                <input  style="display: none;" type="text" name="security" id="sec2">
-                
-                <input style="display: none;" type="file" value="Upload New image" id="input1" accept="image/*" name="file">   
-                <input type="button" value="Upload New image" onclick="browse()">
-                <output id="result">
+        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-6"></div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <form action="/Tourism/trip/createTripApi" method="post" id="form3" enctype="multipart/form-data">
+                <input style="display: none;" type="text" name="costs" id="costs2">
+                <input style="display: none;" type="text" name="suggestion" id="suggest2">
+                <input style="display: none;" type="text" name="transportation" id="trans2">
+                <input style="display: none;" type="text" name="description" id="others2">
+                <input style="display: none;" type="text" name="fullAddress" id="fadd2">
+                <input style="display: none;" type="text" name="history" id="his2">
+                <input style="display: none;" type="text" name="culture" id="cul2">
+                <input style="display: none;" type="text" name="security" id="sec2">
+
+                <input style="display: none;" type="file" value="Upload New image" id="input1" accept="image/*" name="file">
+                <input class="add" type="button" value="اضافه کردن عکس جديد" onclick="browse()">
+                <output class="row_images" id="result">
             </form>
         </div>
-        <div  class="col-lg-4 col-md-4 col-sm-3 col-xs-2"></div>
-        <div  class="col-lg-4 col-md-4 col-sm-6 col-xs-8">
-            <div>
-                <input type="button" value="ثبت تجربه سفر" onclick="create()">
-            </div>
+        <!-- <div class="col-lg-4 col-md-4 col-sm-3 col-xs-2"></div> -->
+        <div class="btncontainer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            
+                <input class="acc" type="button" value="ثبت تجربه سفر" onclick="create()">
+                <a href="/Tourism/user/panel" class="rej">
+                    <input class="btnrej" style="background-color: red;" type="button" value="انصراف">
+                </a>
+            
         </div>
-        <div  class="col-lg-4 col-md-4 col-sm-3 col-xs-2"></div>
-        
-        
+        <!-- <div class="col-lg-4 col-md-4 col-sm-3 col-xs-2"></div> -->
+
+
     </div>
-    
-      
+
+
 </body>
 <script src="/Tourism/Views/js/journey.js"></script>
+
 </html>

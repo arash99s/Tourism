@@ -43,9 +43,11 @@
                             </p> -->
                         </div>
                             <p>email</p>
-                        <input type="email" name="email" #email="ngModel" email />
-                        <p>full name</p>
-                        <input type="text" name="name"  />
+                        <input type="email" name="email" email />
+                        <p>first name</p>
+                        <input type="text" name="fname"  />
+                        <p>last name</p>
+                        <input type="text" name="lname"  />
                         <p>age</p>
                         <input type="text" name="age"  />
                         <p>city</p>

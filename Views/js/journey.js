@@ -24,9 +24,11 @@ var functionHandler = (e)=>{
         const picReader = new FileReader(); // RETRIEVE DATA URI 
         picReader.addEventListener("load", function (event) { // LOAD EVENT FOR DISPLAYING PHOTOS
           const picFile = event.target;
-          const div = document.createElement("div");
-          div.innerHTML = `<img class="thumbnail" src="${picFile.result}" title="${picFile.name}"/>`;
-          output.appendChild(div);
+          const img = document.createElement("img");
+          img.src =picFile.result;
+          img.classList.add("thumbnail");
+          img.title = picFile.name;
+          output.appendChild(img);
         });
 
 
