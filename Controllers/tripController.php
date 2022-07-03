@@ -4,16 +4,19 @@ class tripController extends Controller{
     function __construct() {
         require(ROOT . 'Models/Trip.php');
         require(ROOT . 'Controllers/imageController.php');
+        require(ROOT . 'Models/User.php');
       }
 
     
     function main(){
         $trip_model = new Trip();
+        $user_model = new User();
         $imageController = new imageController();
 
         $trips_db = $trip_model->showAlltrips();
         for ($i=0; $i < count($trips_db) ; $i++) { 
             $trips_db[$i]['images'] = $imageController->getImagesTrip($trips_db[$i]['id']);
+            $trips_db[$i]['user'] = $user_model->getById($trips_db[$i]['userId']);
         }
 
         $this->set(['trips_db'=>$trips_db]); // send data to view

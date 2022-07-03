@@ -58,7 +58,7 @@
                             <div class="head d-flex justify-content-between flex-sm-wrap flex-md-wrap w-100">
                                 <a routerLink="rooms">
                                     <h2>
-                                        User name
+                                        <?php echo $trip_db['user']['username']?>
                                     </h2>
                                 </a>
                             </div>
