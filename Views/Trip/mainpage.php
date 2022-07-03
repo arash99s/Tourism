@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/Tourism/views/styles/mainpage.css">
 
-    <title>Document</title>
+    <title>صفحه ی اصلی گردشگری</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
