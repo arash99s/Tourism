@@ -104,5 +104,5 @@
     
       
 </body>
-
+<script src="/Tourism/Views/js/trip.js"></script>
 </html>
