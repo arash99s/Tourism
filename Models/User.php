@@ -36,6 +36,14 @@ class User extends Model
         return $req->fetch();
     }
 
+    public function getById($userId)
+    {
+        $sql = "SELECT * FROM users WHERE id = ?";
+        $req = Database::getBdd()->prepare($sql);
+        $req->execute([$userId]);
+        return $req->fetch();
+    }
+
     public function showAllUsers()
     {
         $sql = "SELECT * FROM users";
