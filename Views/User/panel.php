@@ -98,6 +98,7 @@
             <input type="button" value="new journey" onclick="createTrip()">
             <a href="/Tourism/user/logout" class="alogout"><input type="button" value="logout" class="logout"></a>
             <a href="/Tourism/trip/main" class="alogout"><input type="button"  value="Main Page" class="home"></a>
+            <a href="" class="alogout"><input type="button"  value="My Trips" class="mytrip"></a>
         </div>
         <!-- <div class="col-lg-1"></div> -->
     </div>
