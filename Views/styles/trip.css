@@ -35,6 +35,7 @@ body{
     overflow: hidden; 
     text-align: center;
     margin: auto;
+    margin-bottom: 20px !important;
   }
   
   .menu {
