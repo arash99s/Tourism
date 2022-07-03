@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Tourism/views/styles/panel.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <title>Document</title>
+    <title>پنل کاربری</title>
 </head>
 <body>
     <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"></div>
@@ -98,7 +98,7 @@
             <input type="button" value="new journey" onclick="createTrip()">
             <a href="/Tourism/user/logout" class="alogout"><input type="button" value="logout" class="logout"></a>
             <a href="/Tourism/trip/main" class="alogout"><input type="button"  value="Main Page" class="home"></a>
-            <a href="" class="alogout"><input type="button"  value="My Trips" class="mytrip"></a>
+            <a href="/Tourism/trip/getMyTrips" class="alogout"><input type="button"  value="My Trips" class="mytrip"></a>
         </div>
         <!-- <div class="col-lg-1"></div> -->
     </div>

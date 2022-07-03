@@ -77,7 +77,7 @@
         <i class='fas fa-pencil-alt'></i>&nbsp;<label for="auth"> نويسنده اين تجربه  : </label>
           <p id="auth">
             <?php 
-              echo $trip_db["fullAddress"];
+              echo $trip_db["user"]['username'];
             ?>
           </p>
           <i class='fas fa-ad fa-1x'></i>&nbsp;<label for="fadd"> آدرس کامل  : </label>

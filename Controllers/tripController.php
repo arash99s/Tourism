@@ -9,6 +9,7 @@ class tripController extends Controller{
 
     
     function main(){
+        session_start();
         $trip_model = new Trip();
         $user_model = new User();
         $imageController = new imageController();
@@ -29,27 +30,34 @@ class tripController extends Controller{
 
     function get($tripId){
         $trip_model = new Trip();
+        $user_model = new User();
         $imageController = new imageController();
 
         $trip_db = $trip_model->getTrip($tripId);
         $trip_db['images'] = $imageController->getImagesTrip($tripId);
+        $trip_db['user'] = $user_model->getById($trip_db['userId']);
         $this->set(['trip_db'=>$trip_db]); // send data to view
         $this->render("trip");
     }
 
-    function getAll(){
+    function getMyTrips(){
         session_start();
         if (!isset($_SESSION["user"])){
             echo 'user not defined';
             return;
         }
         $trip_model = new Trip();
+        $user_model = new User();
         $imageController = new imageController();
+
         $trips_db = $trip_model->getTripsUser($_SESSION["user"]['username']);
+
         for ($i=0; $i < count($trips_db) ; $i++) { 
             $trips_db[$i]['images'] = $imageController->getImagesTrip($trips_db[$i]['id']);
+            $trips_db[$i]['user'] = $user_model->getById($trips_db[$i]['userId']);
         }
-        print_r($trips_db);
+        $this->set(['trips_db'=>$trips_db]); // send data to view
+        $this->render("mainpage"); // call view
     }
 
 

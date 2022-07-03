@@ -51,7 +51,7 @@ class userController extends Controller{
             'password'=>$password,
             'email'=>$decoded["email"],
             'firstname'=>$decoded["firstname"],
-            'lastname'=>'',
+            'lastname'=>$decoded["lastname"],
             'age'=>$decoded["age"],
             'city'=>$decoded["city"],
             'country'=>$decoded["country"],

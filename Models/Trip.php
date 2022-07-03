@@ -52,7 +52,7 @@ class Trip extends Model
     public function getTripsUser($username){
         $sql = "SELECT * FROM trips WHERE userId in (
             SELECT id FROM users WHERE username = ?
-        )";
+        ) ORDER BY updated_at DESC";
         $req = Database::getBdd()->prepare($sql);
         $req->execute([$username]);
         return $req->fetchAll();

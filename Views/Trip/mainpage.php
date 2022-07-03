@@ -1,7 +1,7 @@
 <?php
     $show_name = "Login";
     $path = "/Tourism/user/loginUser";
-    session_start();
+    
     if(isset($_SESSION["user"])){
         $show_name = "Logout";
         $path = "/Tourism/user/logout";
