@@ -72,7 +72,7 @@
                 <input  style="display: none;" type="text" name="culture" id="cul2">
                 <input  style="display: none;" type="text" name="security" id="sec2">
                 
-                <input style="display: none;" type="file" multiple="multiple" value="Upload New image" id="input1" accept="image/*" name="file">   
+                <input style="display: none;" type="file" value="Upload New image" id="input1" accept="image/*" name="file">   
                 <input type="button" value="Upload New image" onclick="browse()">
                 <output id="result">
             </form>

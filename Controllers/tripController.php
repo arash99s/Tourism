@@ -30,7 +30,8 @@ class tripController extends Controller{
 
         $trip_db = $trip_model->getTrip($tripId);
         $trip_db['images'] = $imageController->getImagesTrip($tripId);
-        print_r($trip_db);
+        $this->set(['trip_db'=>$trip_db]); // send data to view
+        $this->render("trip");
     }
 
     function getAll(){
