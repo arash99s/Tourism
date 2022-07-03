@@ -36,7 +36,7 @@ class Trip extends Model
 
     public function showAlltrips()
     {
-        $sql = "SELECT * FROM trips";
+        $sql = "SELECT * FROM trips ORDER BY updated_at DESC";
         $req = Database::getBdd()->prepare($sql);
         $req->execute();
         return $req->fetchAll();

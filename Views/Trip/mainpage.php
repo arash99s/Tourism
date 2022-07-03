@@ -1,3 +1,7 @@
+<?php
+//print_r($trips_db);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

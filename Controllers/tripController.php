@@ -7,17 +7,33 @@ class tripController extends Controller{
       }
 
     
-    function index(){
-        // $xvar = 'salam';
-        // $this->set(['xvar'=>$xvar]);
-        $this->render("test"); // call view
+    function main(){
+        $trip_model = new Trip();
+        $imageController = new imageController();
+
+        $trips_db = $trip_model->showAlltrips();
+        for ($i=0; $i < count($trips_db) ; $i++) { 
+            $trips_db[$i]['images'] = $imageController->getImagesTrip($trips_db[$i]['id']);
+        }
+
+        $this->set(['trips_db'=>$trips_db]); // send data to view
+        $this->render("mainpage"); // call view
     }
 
     function create(){
         $this->render("journey");
     }
 
-    function get(){
+    function get($tripId){
+        $trip_model = new Trip();
+        $imageController = new imageController();
+
+        $trip_db = $trip_model->getTrip($tripId);
+        $trip_db['images'] = $imageController->getImagesTrip($tripId);
+        print_r($trip_db);
+    }
+
+    function getAll(){
         session_start();
         if (!isset($_SESSION["user"])){
             echo 'user not defined';
