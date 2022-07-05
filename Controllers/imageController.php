@@ -26,7 +26,11 @@ class imageController extends Controller{
 
     public function getImagesTrip($tripId){
         $image_model = new Image();
-        return $image_model->getImagesTrip($tripId);
+        $result = $image_model->getImagesTrip($tripId);
+        if (count($result) == 0){
+            $result[0]['addressPath'] = '/Tourism/avatars/placeholder.png';
+        }
+        return $result;
     }
 
     /*
