@@ -83,6 +83,9 @@ if (isset($_SESSION["user"])) {
             <!-- <p class="succ">
                 سفر شما با موفقيت ثبت شد
             </p> -->
+            <!-- <p class="req">
+                وارد کردن ادرس ضروری است
+            </p> -->
         </div>
         <div class="btncontainer col-lg-12 col-md-12 col-sm-12 col-xs-12">
             

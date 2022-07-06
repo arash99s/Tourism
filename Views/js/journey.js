@@ -1,7 +1,11 @@
-let fileInput = document.getElementById("input1");
+    let fileInput = document.getElementById("input1");
     const form1 = document.getElementById("form1");
     const form2 = document.getElementById("form2");
     const form3 = document.getElementById("form3");
+    const fadd = document.getElementById("fadd");
+    const showalert = document.getElementById("showAlertDiv");
+
+
 
 var global_files = [];
 var global_file_index = 0;
@@ -63,15 +67,27 @@ document.querySelector("#input1").addEventListener("change", functionHandler);
     
 
     var paragraphAlert = document.createElement('p');
-      paragraphAlert.className = 'succ';
-      paragraphAlert.appendChild(document.createTextNode('سفر شما با موفقيت ثبت شد'));
-      document.getElementById("showAlertDiv").appendChild(paragraphAlert);
+    showalert.innerHTML=``;
+    if(fadd.value==""){
+        paragraphAlert.className = 'req';
+        paragraphAlert.appendChild(document.createTextNode('وارد کردن ادرس ضروری است'));
+        document.getElementById("showAlertDiv").appendChild(paragraphAlert);
+      }else{
+        
+        
+        paragraphAlert.className = 'succ';
+        paragraphAlert.appendChild(document.createTextNode('سفر شما با موفقيت ثبت شد'));
+        document.getElementById("showAlertDiv").appendChild(paragraphAlert);
+        var delayInMilliseconds = 3000; //1 second
+        setTimeout(function() {
+          form3.submit();
+        }, delayInMilliseconds);
+      }
+      
 
-      var delayInMilliseconds = 3000; //1 second
+      
 
-      setTimeout(function() {
-        form3.submit();
-      }, delayInMilliseconds);
+      
 
     
     
