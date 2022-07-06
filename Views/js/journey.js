@@ -7,9 +7,7 @@ var global_files = [];
 var global_file_index = 0;
 
     function browse(){
-        
-
-        fileInput.click();
+      fileInput.click();
     }
 
 
@@ -63,14 +61,18 @@ document.querySelector("#input1").addEventListener("change", functionHandler);
     form3.children.sec2.value=form2.children.sec.value;
     form3.children.his2.value=form2.children.his.value;
     
-    console.log(form3.children.costs2.value);
-    console.log(form3.children.suggest2.value);
-    console.log(form3.children.trans2.value);
-    console.log(form3.children.others2.value);
-    console.log(form3.children.fadd2.value);
-    console.log(form3.children.cul2.value);
-    console.log(form3.children.sec2.value);
-    console.log(form3.children.his2.value);
-    form3.submit();
+
+    var paragraphAlert = document.createElement('p');
+      paragraphAlert.className = 'succ';
+      paragraphAlert.appendChild(document.createTextNode('سفر شما با موفقيت ثبت شد'));
+      document.getElementById("showAlertDiv").appendChild(paragraphAlert);
+
+      var delayInMilliseconds = 3000; //1 second
+
+      setTimeout(function() {
+        form3.submit();
+      }, delayInMilliseconds);
+
+    
     
   }
