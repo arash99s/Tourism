@@ -53,25 +53,24 @@ document.querySelector("#input1").addEventListener("change", functionHandler);
 
 
   function create(){
-
+    
     form3.children.costs2.value=form1.children.costs.value;
-        form3.children.suggest2.value=form1.children.suggest.value;
-        form3.children.trans2.value=form1.children.trans.value;
-        form3.children.others2.value=form1.children.others.value;
-        form3.children.fadd2.value=form2.children.fadd.value;
-        form3.children.cul2.value=form2.children.cul.value;
-        form3.children.sec2.value=form2.children.sec.value;
-        form3.children.his2.value=form2.children.his.value;
-        
-        console.log(form3.children.costs2.value);
-        console.log(form3.children.suggest2.value);
-        console.log(form3.children.trans2.value);
-        console.log(form3.children.others2.value);
-        console.log(form3.children.fadd2.value);
-        console.log(form3.children.cul2.value);
-        console.log(form3.children.sec2.value);
-        console.log(form3.children.his2.value);
-
-        
-        form3.submit();
+    form3.children.suggest2.value=form1.children.suggest.value;
+    form3.children.trans2.value=form1.children.trans.value;
+    form3.children.others2.value=form1.children.others.value;
+    form3.children.fadd2.value=form2.children.fadd.value;
+    form3.children.cul2.value=form2.children.cul.value;
+    form3.children.sec2.value=form2.children.sec.value;
+    form3.children.his2.value=form2.children.his.value;
+    
+    console.log(form3.children.costs2.value);
+    console.log(form3.children.suggest2.value);
+    console.log(form3.children.trans2.value);
+    console.log(form3.children.others2.value);
+    console.log(form3.children.fadd2.value);
+    console.log(form3.children.cul2.value);
+    console.log(form3.children.sec2.value);
+    console.log(form3.children.his2.value);
+    form3.submit();
+    
   }

@@ -79,7 +79,11 @@ if (isset($_SESSION["user"])) {
                 <output class="row_images" id="result">
             </form>
         </div>
-        <!-- <div class="col-lg-4 col-md-4 col-sm-3 col-xs-2"></div> -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p class="succ">
+                سفر شما با موفقيت ثبت شد
+            </p>
+        </div>
         <div class="btncontainer col-lg-12 col-md-12 col-sm-12 col-xs-12">
             
                 <input class="acc" type="button" value="ثبت تجربه سفر" onclick="create()">
